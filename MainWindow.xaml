@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ورود به سامانه" Height="550" Width="300" FlowDirection="LeftToRight"
+        Background="#D2B48C" FontSize="30" FontFamily="Lotus"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" FontWeight="Bold">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image x:Name="Logo" Stretch="Fill" Grid.Row="1" Margin="10,10" Cursor="None">
+                <Image.Source>
+                    <BitmapImage UriSource="E:\C# Exercises\Project\pdf\logo.png"/>
+                </Image.Source>
+            </Image>
+            <TextBlock Text="سامانه فروش کتاب" FontSize="26"
+                       FontFamily="Nasim" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Grid.Row="2"/>
+            <StackPanel Grid.Row="3" Margin="10,10">
+                <TextBlock Text="نام کاربری" FontSize="14"/>
+                <TextBox x:Name="UserName" Background="#DEB887" BorderThickness="2"
+                         FontSize="16" FontFamily="Times New Roman"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Margin="10,10">
+                <TextBlock Text="رمز عبور" FontSize="14"/>
+                <PasswordBox x:Name="Password" Background="#DEB887" BorderThickness="2" FontSize="14"/>
+                <CheckBox Content="به خاطر بسپار" FontSize="12"/>
+            </StackPanel>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Name="Enrollment" Grid.Column="0" Content="ثبت نام" FontSize="18" Margin="30,30" Background="#CD5C5C" Click="Enrollment_Click"/>
+                <Button Name="Enterance" Grid.Column="1" Content="ورود" FontSize="18" Margin="30,30" Background="#CD5C5C" Click="Enterance_Click"/>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.9*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="CloseButton" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Click="CloseButton_Click">
+                    <Image x:Name="Close" Stretch="Fill" HorizontalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="E:\C# Exercises\Project\pdf\close.png"/>
+                        </Image.Source>
+                    </Image>
+                </Button>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Window>
