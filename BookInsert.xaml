@@ -1,0 +1,123 @@
+﻿<Window x:Class="WpfProject.BookInsert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProject"
+        mc:Ignorable="d"
+        Title="BookInsert" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        ResizeMode="NoResize" Background="#D2B48C" FontFamily="Lotus" FontSize="18" FontWeight="ExtraBold"
+        FlowDirection="RightToLeft">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="0.8*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="درج مشخصات کتاب" FontSize="28" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="نام کتاب" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="BookName" Grid.Column="1" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="2" Text="مسير جلد کتاب" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="CoverFilePath" Grid.Column="3" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="4" Text="مسير فايل کتاب" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="PdfFilePath" Grid.Column="5" Background="#DEB887" BorderThickness="2"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="نام نويسنده" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="AuthorName" Grid.Column="1" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="2" Text="نام خانوادگي نويسنده" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="AuthorFamily" Grid.Column="3" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="4" Text="نوع" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <ComboBox x:Name="AuthorType" Grid.Column="5" Background="#DEB887" BorderThickness="2">
+                    <ComboBoxItem x:Name="Item1" Content="مولف" Background="#CD5C5C"/>
+                    <ComboBoxItem x:Name="Item2" Content="مترجم" Background="#CD5C5C"/>
+                </ComboBox>
+                <TextBlock Grid.Column="6" Text="VIP" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <CheckBox x:Name="Vip" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="درصد تخفيف" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="Discount" Grid.Column="1" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="2" Text="تاريخ انقضاء" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="DiscountExpDate" Grid.Column="3" Background="#DEB887" BorderThickness="2" Margin="0,28,0,-28"/>
+                <TextBlock Grid.Column="4" Text="موجودي" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="StockNumber" Grid.Column="5" Background="#DEB887" BorderThickness="2"/>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="قيمت" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="Price" Grid.Column="1" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="2" Text="توضيحات" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="Description" Grid.Column="3" Background="#DEB887" BorderThickness="2"/>
+                <TextBlock Grid.Column="4" Text="سال انتشار" VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="PrintYear" Grid.Column="5" Background="#DEB887" BorderThickness="2"/>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="SaveBt" Content="ذخيره" Background="#CD5C5C" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"
+                        Padding="35,2" Click="SaveBt_Click"/>
+                <Button x:Name="ExitBt" Content="بازگشت" Background="#CD5C5C"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" 
+                        Padding="30,2" Click="ExitBt_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

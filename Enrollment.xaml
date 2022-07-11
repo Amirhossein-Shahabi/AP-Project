@@ -1,0 +1,66 @@
+﻿<Window x:Class="WpfProject.Enrollment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ثبت نام" Height="500" Width="300" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize" FontSize="16" FontFamily="Lotus" Background="#D2B48C">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="7" FlowDirection="RightToLeft">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ExitBt" Content="بازگشت" Grid.Row="7" Grid.Column="1"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" 
+                        Background="#CD5C5C" Padding="10,2" Click="ExitBt_Click"/>
+                <Button x:Name="EnrollBt" Content="ثبت نام" Grid.Row="7" Grid.Column="0"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" 
+                        Background="#CD5C5C" Padding="10,2" Click="EnrollBt_Click"/>
+            </Grid>
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="ثبت نام" FontSize="26"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="*نام" HorizontalAlignment="Right"/>
+                <TextBox x:Name="Name" Background="#DEB887" BorderThickness="2" 
+                         VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="*نام خانوادگي" HorizontalAlignment="Right"/>
+                <TextBox x:Name="Family" Background="#DEB887" BorderThickness="2" 
+                         VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3">
+                <TextBlock Text="*ايميل" HorizontalAlignment="Right"/>
+                <TextBox x:Name="Email" Background="#DEB887" BorderThickness="2" 
+                         VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4">
+                <TextBlock Text="*شماره موبايل" HorizontalAlignment="Right"/>
+                <TextBox x:Name="Cellphone" Background="#DEB887" BorderThickness="2" 
+                         VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="5">
+                <TextBlock Text="*رمز عبور" HorizontalAlignment="Right"/>
+                <PasswordBox x:Name="Password" Background="#DEB887" BorderThickness="2" 
+                         VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="6">
+                <TextBlock Text="*تکرار رمز عبور" HorizontalAlignment="Right"/>
+                <PasswordBox x:Name="Rpassword" Background="#DEB887" BorderThickness="2" 
+                         VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

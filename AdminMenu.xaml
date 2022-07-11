@@ -1,0 +1,33 @@
+﻿
+<Window x:Name="MenuAdminUser" x:Class="WpfProject.AdminMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="منوي اصلي مدير" Height="550" Width="500" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize" Background="#DEB887" FontSize="16" FontFamily="Lotus">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.08*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FlowDirection="RightToLeft" FontSize="14" FontFamily="Lotus" HorizontalAlignment="Right" Name="UserType" Grid.Column="0"/>
+                <TextBlock FlowDirection="RightToLeft" FontSize="14" FontFamily="Lotus" HorizontalAlignment="Right" Name="UserNameFamily" Grid.Column="1"/>
+            </Grid>
+            <Menu Margin="20" Width="400" Background="#FFE4C4" FontSize="24" FontFamily="Lotus" 
+              FlowDirection="RightToLeft" HorizontalAlignment="Center" VerticalAlignment="Center"
+              Grid.Row="1">
+                <MenuItem Header="کتاب ها و تعيين VIP" Background="#B8860B" Width="400" Margin="10,10" Click="MenuItem_Click"/>
+                <MenuItem Header="ليست کاربران" Background="#B8860B" Width="400" Margin="10,10"/>
+                <MenuItem Header="تعيين مبلغ اشتراک VIP" Background="#B8860B" Width="400" Margin="10,10"/>
+                <MenuItem Header="آمار فروش کتاب" Background="#B8860B" Width="400" Margin="10,10"/>
+                <MenuItem Header="صندوق" Background="#B8860B" Width="400" Margin="10,10"/>
+                <MenuItem x:Name="ExitMenuItem" Header="خروج" Background="#B8860B" Width="400" Margin="10,10" Click="ExitMenuItem_Click"/>
+            </Menu>
+        </Grid>
+    </Grid>
+</Window>

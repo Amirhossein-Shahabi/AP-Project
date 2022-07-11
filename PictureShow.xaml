@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfProject.PictureShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProject"
+        mc:Ignorable="d"
+        Title="PictureShow" Height="550" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        ResizeMode="NoResize" Background="#DEB887" FontFamily="Lotus" FontSize="16" FontWeight="ExtraBold">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Image x:Name="Cover" Stretch="Fill" Margin="10,10" Cursor="None"/>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="BookName" Text="نام" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <TextBlock x:Name="AuthorName" Text="نويسنده" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3">
+                <TextBlock x:Name="Price" Text="قيمت" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4">
+                <TextBlock x:Name="Stock" Text="تعداد" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="علاقه ها" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Column="1"/>
+                <TextBox x:Name="Favorite" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                         FontFamily="Wingdings" FontSize="22" Grid.Column="0"/>
+            </Grid>
+            <Grid Grid.Row="6">
+                <Button x:Name="ExitBt" Content="بازگشت" Background="#CD5C5C" VerticalAlignment="Center"                       
+                        Padding="20,0" FontSize="24" FontFamily="Lotus" HorizontalAlignment="Center" Click="ExitBt_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
